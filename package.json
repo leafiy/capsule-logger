@@ -1,0 +1,12 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:leafiy/logger.git",
+  "author": "leafiy <t@leafiy.com>",
+  "license": "MIT",
+  "dependencies": {
+    "path": "^0.12.7",
+    "tracer": "^0.9.8"
+  }
+}
