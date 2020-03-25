@@ -16,8 +16,8 @@ const conf = {
     ],
     dateformat: 'HH:MM:ss.L'
 }
-const logger = (function(logPath = './logs', maxFiles = 30, level = 'warn') {
-    return process.env.NODE_ENV !== 'production' ? require('tracer').colorConsole(conf) : require('tracer').dailyfile({
+const logger = (function(logPath = './logs', maxFiles = 30, level = 'warn', env = 'development') {
+    return env !== 'production' ? require('tracer').colorConsole(conf) : require('tracer').dailyfile({
         root: path.resolve(path.dirname(require.main.filename), logPath),
         maxLogFiles: maxFiles,
         format: [
